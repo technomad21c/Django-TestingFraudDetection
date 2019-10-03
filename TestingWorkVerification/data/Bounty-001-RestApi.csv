@@ -1,0 +1,4 @@
+POST,/api/bountyRS
+GET,/api/MachingBounties
+GET,/predictedReward
+GET,/api/recommendedTesters

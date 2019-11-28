@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'FraudDetection',
     'rest_framework',
     'rest_framework_swagger',
-    'drf_yasg',
 ]
 
 

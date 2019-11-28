@@ -23,17 +23,16 @@ from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
-
 @api_view(['GET'])
 def index(request, name):
     return HttpResponse("Hey " + name + ", it works well!")
 
-
 @api_view(['POST'])
-# @renderer_classes([renderers.OpenAPIRenderer, renderers.SwaggerUIRenderer])
+#@renderer_classes([renderers.OpenAPIRenderer, renderers.SwaggerUIRenderer])
 def setup_fraud_detection(request):
     # save log file and api file from client
     bounty_id = request.POST.get('bountyId')
+    print(bounty_id)
     logfile = bounty_id + '_' + request.POST.get('logfilename')
     apifile = bounty_id + '_' + request.POST.get('apifilename')
     files_dir = settings.TESTING_FILES_ROOT
